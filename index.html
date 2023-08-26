@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <title>Resume Builder</title>
+</head>
+<body>
+  <header>
+    <h1>Resume Builder</h1>
+  </header>
+  <main>
+    <section class="input-form">
+      <h2>Personal Information</h2>
+      <label for="name">Full Name: <input type="text" id="name" value="John Doe"></label>
+      
+      <label for="email">Email: <input type="email" id="email" value="johndoe@example.com"></label>
+      
+      <label for="phone">Phone: <input type="text" id="phone" value="9578467577"></label>
+      
+      <label for="location">Location: <input type="text" id="location" value="221B Baker Street"></label>
+      
+
+      <!-- Add more input fields for other personal info -->
+      
+      <h2>Education</h2>
+      <label for="degree">Degree: <input type="text" id="degree" value="Bachelor of Science"></label>
+      
+      <label for="university">University: <input type="text" id="university" value="Rick University"></label>
+      
+      <label for="dateOfGraduation">Date of Graduation: <input type="text" id="dateOfGraduation" value="09.11.2000"></label>
+      
+      <!-- Add more input fields for education -->
+      
+      <h2>Work Experience</h2>
+      <label for="jobTitle">Job Title: <input type="text" id="jobTitle" value="Web Developer"></label>
+      
+      <label for="company">Company: <input type="text" id="company" value="Tech Solutions Inc."></label>
+      
+      <!-- Add more input fields for work experience -->
+      
+      <h2>Skills</h2>
+      <div class="skillsArea">
+      <label for="skills">Skills: </label>
+      <textarea id="skills">HTML, CSS, JavaScript</textarea>
+      </div>
+      <!-- Add more input fields for skills -->
+      <div class="btn">
+      <button id="generateBtn">Generate Resume</button>
+      <button id="print">Print</button>
+      </div>
+    </section>
+    <section class="preview">
+      <h2>Preview</h2>
+      <div id="preview-content">
+        <!-- Generated resume preview will appear here -->
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.input-form,
+.preview {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: linear-gradient(to right, #d4d4d4, #d195b6);
+}
+
+.input-form input, .input-form textarea{
+  padding: 10px;
+  margin: 8px;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f5f1f1;
+}
+
+.skillsArea{
+  display: flex;
+  align-items: center;
+}
+.btn, .input-form input{
+  display: flex;
+}
+
+button{
+  padding: 8px;
+  border-radius: 8px;
+  margin: 6px;
+  border: none;
+  background-color: #23af35;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover{
+  transform: scale(1.1);
+}
+
+
+
+label{
+  font-size: 18px;
+}
+
