@@ -29,7 +29,7 @@ generateBtn.addEventListener("click", generateResume);
       }
       </style>
       <div class="pdf">
-      <h4>PERSONAL  INFORMATION</h4>
+      <h4>PERSONAL DETAILS</h4>
       <p><strong>Name:</strong> ${nameOfPerson}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone}</p>
