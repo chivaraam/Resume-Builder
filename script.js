@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const generateBtn = document.getElementById("generateBtn");
-  const previewContent = document.getElementById("preview-content");
-  const print = document.getElementById("print");
 
-  generateBtn.addEventListener("click", generateResume);
+const generateBtn = document.getElementById("generateBtn");
+const previewContent = document.getElementById("preview-content");
+const print = document.getElementById("print");
+
+generateBtn.addEventListener("click", generateResume);
 
   function generateResume() {
-    const name = document.getElementById("name").value;
+
+    const nameOfPerson = document.getElementById("nameOfPerson").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const location = document.getElementById("location").value;
@@ -18,8 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const skills = document.getElementById("skills").value;
 
     const resumeHTML = `
-      <h4>PERSONAL INFORMATION</h4>
-      <p><strong>Name:</strong> ${name}</p>
+      <style>
+      p, h4{
+        font-size: 20px;
+      }
+      p{
+        margin: 20px;
+      }
+      </style>
+      <div class="pdf">
+      <h4>PERSONAL  INFORMATION</h4>
+      <p><strong>Name:</strong> ${nameOfPerson}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Location:</strong> ${location}</p>
@@ -33,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       <h4>SKILLS</h4>
       <p>${skills}</p>
+      </div>
     `;
 
     previewContent.innerHTML = resumeHTML;
@@ -42,6 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
     window.print();
   }
 });
+
+function convertHTMLtoPDF() {
+  const { jsPDF } = window.jspdf;
+
+  let doc = new jsPDF('p', 'px', [800,800]);
+  let pdfjs = document.querySelector('#preview-content');
+
+  doc.html(pdfjs, {
+      callback: function(doc) {
+          doc.save("newpdf.pdf");
+      },
+      x: 12,
+      y: 12
+  });               
+}  
 
 
   

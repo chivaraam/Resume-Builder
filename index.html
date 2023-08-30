@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+     </script>
+     <script src=
+ "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+     </script>
+     <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+     </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -18,7 +26,7 @@
   <main>
     <section class="input-form">
       <h2>Personal Information</h2>
-      <label for="name">Full Name: <input type="text" id="name" value="John Doe"></label>
+      <label for="name">Full Name: <input type="text" id="nameOfPerson" value="John Doe"></label>
       
       <label for="email">Email: <input type="email" id="email" value="johndoe@example.com"></label>
       
@@ -54,6 +62,7 @@
       <div class="btn">
       <button id="generateBtn">Generate Resume</button>
       <button id="print">Print</button>
+      <button id="convert" onclick="convertHTMLtoPDF()">Download PDF</button>
       </div>
     </section>
     <section class="preview">

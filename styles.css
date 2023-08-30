@@ -3,13 +3,13 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: ghostwhite;
 }
 
 header {
-  background-color: #333;
+  background-color: #060505;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -28,7 +28,7 @@ main {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background: linear-gradient(to right, #d4d4d4, #d195b6);
+  background: linear-gradient(to right, #d4d4d4, #212497);
 }
 
 .input-form input, .input-form textarea{
@@ -63,6 +63,9 @@ button:hover{
   transform: scale(1.1);
 }
 
+#preview-content{
+  font-family:'Courier New', Courier, monospace;
+}
 
 
 label{
