@@ -27,8 +27,7 @@ generateBtn.addEventListener("click", generateResume);
       <br>
 
       <h3>EDUCATION</h3>
-      <p>${degree} - ${university}</p>
-      <p>${dateOfGraduation}</p>
+      <p>${degree} - ${university} - ${dateOfGraduation}</p>
       
       <h3>WORK EXPERIENCE</h3>
       <p>${jobTitle} at ${company}</p>
