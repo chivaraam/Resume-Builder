@@ -72,3 +72,20 @@ label{
   font-size: 18px;
 }
 
+
+@media print {
+  body {
+    visibility: hidden;
+    background: linear-gradient(to right, #d4d4d4, #212497);
+    
+  }
+  #preview-content {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: none;
+    padding: 30px;
+    
+  }
+}

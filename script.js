@@ -20,16 +20,8 @@ generateBtn.addEventListener("click", generateResume);
     const skills = document.getElementById("skills").value;
 
     const resumeHTML = `
-      <style>
-      p, h4{
-        font-size: 20px;
-      }
-      p{
-        margin: 20px;
-      }
-      </style>
-      <div class="pdf">
-      <h4>PERSONAL DETAILS</h4>
+    
+      <h4>PERSONAL INFORMATION</h4>
       <p><strong>Name:</strong> ${nameOfPerson}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone}</p>
@@ -44,7 +36,6 @@ generateBtn.addEventListener("click", generateResume);
       
       <h4>SKILLS</h4>
       <p>${skills}</p>
-      </div>
     `;
 
     previewContent.innerHTML = resumeHTML;
@@ -55,20 +46,6 @@ generateBtn.addEventListener("click", generateResume);
   }
 });
 
-function convertHTMLtoPDF() {
-  const { jsPDF } = window.jspdf;
-
-  let doc = new jsPDF('p', 'px', [800,800]);
-  let pdfjs = document.querySelector('#preview-content');
-
-  doc.html(pdfjs, {
-      callback: function(doc) {
-          doc.save("newpdf.pdf");
-      },
-      x: 12,
-      y: 12
-  });               
-}  
 
 
   
