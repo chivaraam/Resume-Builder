@@ -20,21 +20,20 @@ generateBtn.addEventListener("click", generateResume);
     const skills = document.getElementById("skills").value;
 
     const resumeHTML = `
-    
-      <h4>PERSONAL INFORMATION</h4>
-      <p><strong>Name:</strong> ${nameOfPerson}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Location:</strong> ${location}</p>
+      
+      <h2>${nameOfPerson}</h2>
+      <hr>
+      <p>${email} || ${phone} || ${location}</p>
+      <br>
 
-      <h4>EDUCATION</h4>
+      <h3>EDUCATION</h3>
       <p>${degree} - ${university}</p>
-      <p><strong>Date of Graduation:</strong> ${dateOfGraduation}</p>
+      <p>${dateOfGraduation}</p>
       
-      <h4>WORK EXPERIENCE</h4>
+      <h3>WORK EXPERIENCE</h3>
       <p>${jobTitle} at ${company}</p>
-      
-      <h4>SKILLS</h4>
+
+      <h3>SKILLS</h3>
       <p>${skills}</p>
     `;
 
